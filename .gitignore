@@ -2,5 +2,5 @@
 #
 
  ep202407leetCode.iml
- ./.idea/
- /.venv
+ .idea/
+ .venv/

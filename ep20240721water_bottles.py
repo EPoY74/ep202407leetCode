@@ -28,25 +28,7 @@ class Solutions:
         что бы получит одну полную бутылку.
         :rtype: int
         """
-        print(f"Бутылок на входе: {num_bottles}")
-        if num_bottles < num_exchange:
-            return num_bottles
-        new_exchanged_bottles: int = int(num_bottles / num_exchange)
-        exchanged_bottles:int = num_bottles - new_exchanged_bottles
-        exchanged_bottles_tail: int = int(num_bottles % num_exchange)
-        print(f"Бутылок c обмена: {new_exchanged_bottles}")
-        print(f"Хвост от бутылок {exchanged_bottles_tail}")
-        # bottles_drinked = int(num_bottles/num_exchange)
-
-        if (exchanged_bottles_tail == 0):
-            total_bottles: int = (num_bottles +
-                             self.num_water_bottles(new_exchanged_bottles, num_exchange))
-            print(f"Всего бутылок {total_bottles}")
-        else:
-           remains_bottles = exchanged_bottles_tail
-           total_bottles: int = (num_bottles +
-                                 self.num_water_bottles(new_exchanged_bottles
-                                                        , num_exchange))
+       while (num_water_bottles)
 
 
         return total_bottles

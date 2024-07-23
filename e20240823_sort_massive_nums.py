@@ -6,20 +6,32 @@
 
 Вы должны написать алгоритм, который выполняется за O(n) время
 и использует только постоянное дополнительное пространство.
+Автор: ЕВгений Петров
+e-mail: epoy74@gmail.com
+
+Сайт задачи: https://leetcode.com/problems/find-all-duplicates-in-an-array/?envType=daily-question&envId=2024-07-07
 """
 
 from typing import List
 
 
 class Solution:
+
+    """
+    Клас для решения задач с leetcode
+    """
     def find_duplicates(self, nums: List[int]) -> List[int]:
-        out_list: List[int]
+        """
+        Метод ищет дубликаты int во входящем массиве
+        :param nums:  Массив int, в котором ищутся дубликат
+        :return: Массив дубликатов
+        """
+        out_list: List[int] = []
         for i in range(len(nums)):
             count_nums: int = nums.count(nums[i])
-            if count_nums == 2 :
+            if count_nums == 2 and nums[i] not in out_list :
                 out_list.append(nums[i])
-        print(out_list)
-
+        return out_list
 
 
 if __name__ == "__main__":

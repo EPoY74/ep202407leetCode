@@ -14,6 +14,7 @@ e-mail: epoy74@gmail.com
 """
 
 from typing import List
+from typing import Tuple
 
 
 class Solution:
@@ -99,6 +100,31 @@ class Solution:
         return hare
 
 
+    def find_duplicate_new_5(self, nums1: List[int]) -> int:
+        """
+        Корректно по условиям задачи использовать алгоритм Флойдовой черепахи
+        Действую через кортеж
+        :param nums:
+        :return:
+        """
+        nums: Tuple = tuple(nums1)
+
+        tortoise = hare = nums[0]
+        while True:
+            hare = nums[nums[hare]]
+            tortoise = nums[tortoise]
+            if hare == tortoise:
+                break
+        print(hare)
+
+        tortoise = nums[0]
+        while tortoise != hare:
+            tortoise = nums[tortoise]
+            hare = nums[hare]
+        print(hare)
+        return hare
+
+
 
 if __name__ == "__main__":
     # input_list: List[int] = [0]
@@ -121,4 +147,4 @@ if __name__ == "__main__":
     #     print(input_list[i])
 
     my_nums = Solution()
-    print(my_nums.find_duplicate_new_4(input_list))
+    print(my_nums.find_duplicate_new_5(input_list))
